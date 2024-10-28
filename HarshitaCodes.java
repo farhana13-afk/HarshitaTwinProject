@@ -6,6 +6,8 @@ public class HarshitaCodes
 
 	}
 	public int askForNum () {
-		return 0;
+		Scanner reader = new Scanner (System.in);
+		int num = reader.nextInt();
+		return num;
 	}
 }
