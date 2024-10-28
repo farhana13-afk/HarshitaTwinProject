@@ -8,6 +8,7 @@ public class HarshitaCodes
 		int num = reader.nextInt();
 		int [][] array = createArray(num);
 		printArray(array);
+		System.out.println(analyzeArray(array));
 	}
 
 	public static int[][] createArray (int num) {
@@ -28,5 +29,16 @@ public class HarshitaCodes
 			}
 			System.out.println();
 		}
+	}
+
+	public static int analyzeArray (int [][] numbers) {
+		for (int i = 0; i < numbers.length; i++) {
+			for (int j = 0; j < numbers[0].length; j++) {
+				if (numbers[i][j]%2 == 0) {
+					return numbers[i][j];
+				}
+			}
+		}
+		return -1;
 	}
 }
